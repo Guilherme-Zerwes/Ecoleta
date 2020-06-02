@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Criar um ponto de coleta</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <link rel="icon" href="/assets/check.svg">
+		<link rel="stylesheet" href="/styles/main.css">
+		<link rel="stylesheet" href="/styles/create-point.css">
+		<link rel="stylesheet" href="/styles/responsive.css">
+
+	</head>
+	<body>
+		<div id="page-create-point">
+			<header>
+                <img src="/assets/logo.svg" alt="logo">
+				<a href="./index.html"><span></span>Voltar para home</a>
+            </header>
+            
+			<form>
+                <h1>Cadastro do ponto de coleta</h1>
+
+                <fieldset>
+                    <legend>
+                        <h2>Dados da entidade</h2>
+                    </legend>
+
+                    <div class="field">
+                        <label for="name">Nome da entidade</label>
+                        <input type="text" name="name" placeholder="Digite o nome">
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="adress">Endereço</label>
+                            <input type="text" name="adress" placeholder="Digite o endereço">
+                        </div>
+                        <div class="field">
+                            <label for="adress2">Número/Complemento</label>
+                            <input type="text" name="adress2" placeholder="Digite o Número/Complemento">
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <div class="field">
+                            <label for="state">Estado</label>
+                            <select name="uf">
+                                <option value="">Selecione um estado</option>
+                            </select>
+                            <input type="hidden" name="state" value="">
+                        </div>
+                        <div class="field">
+                            <label for="city">Cidade</label>
+                            <select name="city" disabled>
+                                <option value="">Selecione a cidade</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        <h2>Ítens de coleta</h2>
+                        <p>Selecione um ou mais ítens abaixo</p>
+                    </legend>
+                    <div class="field-group">
+                        <div class="field">
+                            <input type="checkbox" name="lampadas">
+                            <span class="lampadas"><label for="lampadas">Lâmpadas</label></span>
+                        </div>
+                        <div class="field">
+                            <input type="checkbox" name="pilhas">
+                            <span class="pilhas"><label for="pilhas">Pilhas e Baterias</label></span>
+                        </div>
+                        <div class="field">
+                            <input type="checkbox" name="papeis">
+                            <span class="papeis"><label for="papeis">Papéis e Papelão</label></span>
+                        </div>
+                    </div>
+                    <div class="field-group">
+                        <div class="field">
+                            <input type="checkbox" name="lampadas">
+                            <span class="eletronicos"><label for="lampadas">Resíduos Eletrônicos</label></span>
+                        </div>
+                        <div class="field">
+                            <input type="checkbox" name="pilhas">
+                            <span class="organicos"><label for="pilhas">Resíduos Orgânicos</label></span>
+                        </div>
+                        <div class="field">
+                            <input type="checkbox" name="papeis">
+                            <span class="oleo"><label for="papeis">Óleo de Cozinha</label></span>
+                        </div>
+                    </div>
+                </fieldset>
+               
+                <button type="submit">Cadastrar ponto de coleta</button>
+                <script src="/scripts/create-point.js"></script>
+            </form>
+        </div>
+	</body>
+</html>
